@@ -1,0 +1,19 @@
+---
+- name: Restart NGINX Service
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Restart NGINX
+      systemd:
+        name: nginx
+        state: restarted
+      register: restart_status
+
+    - name: Log restart status
+      lineinfile:
+        path: /var/log/nginx_autoheal.log
+        line: "{{ ansible_date_time.iso8601 }} - NGINX restart attempted. Status: {{ 'Success' if not restart_status.failed else 'Failed' }}"
+        create: yes
+        owner: root
+        group: root
+        mode: '0644'

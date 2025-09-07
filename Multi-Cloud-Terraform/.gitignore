@@ -1,0 +1,98 @@
+# Terraform files
+**/.terraform/*
+*.tfstate
+*.tfstate.backup
+*.tfstate.*.backup
+*.tfplan
+*.terraform.lock.hcl
+.terraform.lock.hcl
+terraform.tfvars
+*.auto.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Cloud provider credentials
+**/.aws/credentials
+**/.aws/config
+**/credentials.json
+*.json
+*.pem
+*.key
+*.pub
+
+# Environment variables
+.env
+*.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+logs/
+terraform.log
+
+# Backup files
+*.backup
+*.bak
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Local scripts and binaries
+bin/
+scripts/local/
+
+# Package files
+*.zip
+*.tar
+*.gz
+
+# Documentation files (keep only final versions)
+*draft*
+*backup*
+*old*
+
+# Sensitive data patterns
+*secret*
+*password*
+*access*key*
+*secret*key*
+*private*
+*confidential*
+
+# Lock files (except package managers)
+*.lock
+!package-lock.json
+!yarn.lock
+
+# Build artifacts
+build/
+dist/
+out/
+target/
+
+# Local testing files
+test-output/
+coverage/
+.nyc_output/
